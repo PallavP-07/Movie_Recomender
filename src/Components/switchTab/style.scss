@@ -1,0 +1,58 @@
+/* SwitchTab.scss */
+
+.switch-tab {
+    background-color: rgb(249, 249, 249);
+    border-radius: 25px;
+    padding: 2px;
+    .tab-buttons {
+      display: flex;
+      overflow-x: auto; /* Allow horizontal scrolling */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer/Edge */
+  
+      &::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for WebKit browsers */
+      }
+    }
+  
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #313131;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #007bff; /* Change color on hover */
+      }
+  
+      &.active {
+        font-weight: bold; /* Bold font for active tab */
+        color: #ffffff;
+        background: linear-gradient(155deg, rgb(27, 33, 44) 8%, rgb(95, 95, 95) 72%);
+        
+        border-radius: 20px; /* Change color for active tab */
+      }
+  
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  
+    // .tab-content {
+    //   margin-top: 20px;
+    //   /* Add styles for tab content */
+    // }
+  
+    .active-tab-indicator {
+      position: absolute;
+      height: 3px;
+      background-color: #007bff; /* Indicator color */
+      bottom: 0;
+      transition: transform 0.3s ease, width 0.3s ease, left 0.3s ease;
+    }
+  }
+  
